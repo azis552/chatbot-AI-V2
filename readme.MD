@@ -1,107 +1,132 @@
-🤖 Chatbot AI SMK - Berbasis Flask + OpenRouter + Bootstrap
-Chatbot AI ini dibuat untuk membantu siswa SMK berinteraksi dengan model AI berbasis LLM (Large Language Model) menggunakan OpenRouter API. Tampilan dirancang menyerupai ChatGPT, lengkap dengan highlight kode, respons real-time, dan dukungan rumus matematika (MathJax).
 
-✨ Fitur Utama
-✅ Antarmuka ala ChatGPT (responsive, clean, mobile-friendly)
+# 🤖 Chatbot AI SMK - Flask + OpenRouter + Bootstrap
 
-🧠 Menggunakan model AI via OpenRouter (seperti GPT-4o, Mistral, Claude)
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-lightgrey?logo=flask)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Development-yellow)
 
-🧮 Mendukung input/output kode Python dan rumus matematika
+Chatbot ini adalah proyek pembelajaran **Kecerdasan Artifisial (AI)** untuk siswa **SMK**, dibangun menggunakan framework **Flask**, dengan integrasi model **LLM** dari **OpenRouter**. Antarmuka dirancang seperti **ChatGPT**, lengkap dengan bubble chat, highlight kode, dan dukungan rumus matematika.
 
-⚡ Realtime Chat UI (tanpa reload)
+---
 
-🎓 Siap digunakan untuk pembelajaran AI di SMK/SMA/Umum
+## ✨ Fitur
 
-📦 Teknologi yang Digunakan
-Python Flask
+- 🧠 Chat dengan model LLM seperti `gpt-4o`, `mistral`, dll melalui OpenRouter API
+- 💬 Antarmuka real-time dengan Bootstrap (tampilan mirip ChatGPT)
+- 🔍 Highlight otomatis untuk kode Python, HTML, dsb (Prism.js)
+- 📐 Mendukung rumus matematika via MathJax
+- 📱 Responsif di perangkat mobile & desktop
+- 🎓 Cocok untuk proyek edukasi SMK/SMA bidang AI dan pemrograman
 
-OpenRouter API
+---
 
-Bootstrap 5
+## 📦 Teknologi yang Digunakan
 
-Prism.js (highlight sintaks kode)
+- Python 3.10+
+- Flask
+- Bootstrap 5
+- Prism.js
+- MathJax
+- OpenRouter API
 
-MathJax (render rumus)
+---
 
-🚀 Instalasi & Menjalankan
-Clone repositori ini
+## 🚀 Instalasi
 
-bash
-Copy
-Edit
-git clone https://github.com/nama-anda/chatbot-flask-smk.git
-cd chatbot-flask-smk
-Buat virtual environment dan aktifkan
+```bash
+# 1. Clone repository
+git clone https://github.com/username/chatbot-ai-smk.git
+cd chatbot-ai-smk
 
-bash
-Copy
-Edit
+# 2. Buat virtual environment
 python -m venv venv
-source venv/bin/activate        # Linux/Mac
+# Aktifkan:
+source venv/bin/activate        # Linux / Mac
 venv\Scripts\activate           # Windows
-Install dependencies
 
-bash
-Copy
-Edit
+# 3. Install dependencies
 pip install flask requests
-Jalankan aplikasi
 
-bash
-Copy
-Edit
+# 4. Jalankan aplikasi
 python app.py
-Akses di browser
+```
 
-arduino
-Copy
-Edit
+Akses di browser:
+```
 http://localhost:5000
-🔑 Konfigurasi API OpenRouter
-Buka app.py, lalu ganti:
+```
 
-python
-Copy
-Edit
+---
+
+## 🔑 Konfigurasi API OpenRouter
+
+1. Daftar ke [https://openrouter.ai/](https://openrouter.ai/)
+2. Dapatkan API Key
+3. Ganti baris di `app.py`:
+```python
 OPENROUTER_API_KEY = "sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-dengan API Key kamu dari:
-🔗 https://openrouter.ai/
+```
 
-⚠️ Untuk penggunaan gratis, pastikan token masih aktif dan model yang dipilih mendukung free tier.
+> 💡 Gunakan model gratis seperti `mistralai/mistral-7b-instruct`, atau upgrade jika ingin akses GPT-4o.
 
-🖼️ Cuplikan Antarmuka
-Tampilan chat mirip ChatGPT:
+---
 
-Bubble kiri-kanan (bot dan user)
+## 🖼️ Cuplikan Tampilan
 
-Blok kode dengan warna sintaks
+| Chat Responsive         | Kode Python Otomatis |
+|------------------------|----------------------|
+| ![chat-preview](https://i.imgur.com/zGVZfOq.png) | ![code-preview](https://i.imgur.com/OysNN8f.png) |
 
-Scroll otomatis
+---
 
-Responsif di mobile dan desktop
+## 🧪 Contoh Pertanyaan yang Bisa Diajukan
 
-🧪 Contoh Pertanyaan untuk Dicoba
-Buatkan program Python untuk menghitung luas lingkaran
+- `Buatkan program Python penjumlahan`
+- `Apa itu LLM dan bagaimana kerjanya?`
+- `Contoh list dan dictionary di Python`
+- `Tampilkan rumus luas segitiga`
+- `Jelaskan AI di industri pariwisata`
 
-Apa itu LLM dan bagaimana cara kerjanya?
+---
 
-Tampilkan contoh struktur data list di Python
+## 📁 Struktur Folder
 
-Bagaimana menghitung volume balok?
-
-Tampilkan rumus luas segitiga
-
-📁 Struktur Folder
-cpp
-Copy
-Edit
+```
+chatbot-ai-smk/
 ├── app.py
 ├── templates/
 │   └── index.html
-├── static/  (jika kamu ingin tambahkan)
-├── venv/
+├── static/          # optional untuk CSS/JS tambahan
+├── venv/            # virtual environment
 └── README.md
+```
 
+---
 
-📌 Lisensi
-Proyek ini dibuat untuk keperluan edukasi dan pembelajaran. Bebas digunakan untuk SMK/SMA dan pengembangan personal.
+## 🧑‍🏫 Cocok Digunakan untuk
+
+- Pembelajaran AI dan LLM di SMK
+- Demo coding Python interaktif
+- Modul integrasi API eksternal (OpenRouter)
+- Proyek Ujian atau Uji Kompetensi Keahlian
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).  
+Silakan digunakan, dikembangkan, atau dimodifikasi untuk keperluan edukasi maupun proyek pribadi.
+
+---
+
+## 🙋‍♂️ Kontributor
+
+Dikembangkan oleh **Azis (guru SMK)** dengan bantuan AI dan komunitas pembelajaran terbuka.  
+Terima kasih juga untuk [OpenRouter.ai](https://openrouter.ai/) dan [Prism.js](https://prismjs.com/).
+
+---
+
+## 📬 Kontak
+
+Jika ada pertanyaan, saran, atau ingin berkolaborasi, silakan hubungi melalui GitHub Issues atau email.
